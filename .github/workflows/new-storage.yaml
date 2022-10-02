@@ -14,5 +14,5 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: policy-demo-github-actions
         template: ./azuredeploy.json
-        parameters: azuredeploy.parameters.json
+        parameters: parameters.json
     - run: echo ${{ steps.deploy.outputs.containerName }}
