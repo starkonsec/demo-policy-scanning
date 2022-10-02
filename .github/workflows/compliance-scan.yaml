@@ -15,5 +15,5 @@ jobs:
       with:
         scopes: |
           /subscriptions/${{ secrets.AZURE_SUBSCRIPTION }}
-	    report-name: ./compliance-reports/${{ secrets.AZURE_SUBSCRIPTION }}-report.csv
+        report-name: ./compliance-reports/${{ secrets.AZURE_SUBSCRIPTION }}-report.csv
         
