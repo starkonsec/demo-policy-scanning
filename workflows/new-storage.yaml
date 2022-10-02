@@ -20,7 +20,7 @@ on: [push]
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: policy-demo-github-actions
           template: ./template.json
-          parameters: storageAccountName=demodevsecops
+          parameters: .template.parameters.json
 
         # output containerName variable from template
       - run: echo ${{ steps.deploy.outputs.containerName }}
