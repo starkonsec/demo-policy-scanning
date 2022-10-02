@@ -1,5 +1,6 @@
 on: [push]
 name: Azure ARM
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -8,11 +9,10 @@ jobs:
     - uses: azure/login@v1
       with:
        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Run ARM deploy
-      - uses: azure/arm-deploy@v1
-        with:
-         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-         resourceGroupName: policy-demo-github-actions
-         template: ./template.json
-         parameters: azuredeploy.parameters.json
+    - uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
+        resourceGroupName: policy-demo-github-actions
+        template: ./template.json
+        parameters: azuredeploy.parameters.json
     - run: echo ${{ steps.deploy.outputs.containerName }}
