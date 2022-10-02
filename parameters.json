@@ -6,7 +6,7 @@
             "value": "westus3"
         },
         "storageAccountName": {
-            "value": "demodevsecops"
+            "value": "demodevsecops01"
         },
         "accountType": {
             "value": "Standard_LRS"
