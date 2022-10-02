@@ -1,5 +1,5 @@
-on: push
-  name: Azure ARM
+on: [push]
+name: Azure ARM
   jobs:
     build-and-deploy:
       runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ on: push
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           resourceGroupName: policy-demo-github-actions
           template: ./template.json
-          parameters: ./azuredeploy.parameters.json
+          parameters: azuredeploy.parameters.json
 
         # output containerName variable from template
       - run: echo ${{ steps.deploy.outputs.containerName }}
