@@ -1,4 +1,7 @@
-on: [push]
+on:
+  discussion_comment:
+    types: [ created ]
+
 name: Azure ARM
 
 jobs:

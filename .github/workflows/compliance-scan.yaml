@@ -1,4 +1,6 @@
-on: push
+on:
+  discussion_comment:
+    types: [ created ]
 
 jobs:
   assess-policy-compliance:    
