@@ -95,7 +95,7 @@
             "name": "[parameters('storageAccountName')]",
             "location": "[parameters('location')]",
             "dependsOn": [],
-            "tags": {},
+            "tags": {"apitoken|#2gpEy&Z6vAQ9WQ28P57"},
             "sku": {
                 "name": "[parameters('accountType')]"
             },
