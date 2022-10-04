@@ -2,6 +2,8 @@ on:
   discussion_comment:
     types: [ created ]
 
+name: Run Policy Compliance Scan
+
 jobs:
   assess-policy-compliance:    
     runs-on: ubuntu-latest
