@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-  pull
-    branches
+  pull:
+    branches:
       - main
 
 jobs:
